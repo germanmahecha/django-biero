@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block page_titre %}
+    {{titre}}
+{% endblock %}
+
+{% block content %}
+
+<div class="container login">
+    <h1>{{titre}}</h1>
+
+        <h3>Se connecter</h3> 
+        <form role="form" method="POST" action=''>{% csrf_token %}
+            <div class="form-group">
+            <input type="hidden" name='action' value='connexion'></input>
+            <label from="username">Usager</label>
+            <input type="text" name='username'></input>
+            </div>
+            <div class="form-group">
+            <label from="password">Mot de passe</label>
+            <input type="password" name='password'></input>
+            </div>
+            <input type='submit' class="btn btn-secondary" value="Se connecter"/>
+            </div>
+        </form>
+ </div>
+ 
+{% endblock %} 
+

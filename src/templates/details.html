@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block page_titre %}
+    {{titre}}
+{% endblock %}
+
+{% block content %}
+    <div class="container details">
+
+    <h1>{{titre}}</h1>
+        
+        <hr>
+        <div class="row">
+            <div class="col-md-7">
+                <img src="{{ biere.image.url }}" class="img-responsive"    alt="{{biere.image}}">
+                
+            </div>
+            <div class="col-md-5">
+                <h1>{{biere.nomBiere}}</h1>
+                <p><strong>Brasserie:</strong> {{biere.brasserie}}</p>
+                <p><strong>Description:</strong> {{biere.description}}</p>
+                <img src="/media/drapeaux/{{biere.pays}}.png" class="img-responsive"    alt="{{biere.pays}}">
+                <p><strong>Pays:</strong> {{biere.pays}}</p>
+                <p><strong>Date d'ajout:</strong> {{biere.ajoute}}</p>
+                <p><strong>Date de Modification:</strong> {{biere.modifie}}</p>
+                <a class="btn btn-primary" href="{% url 'accueil' %}"><span class="glyphicon glyphicon-chevron-left"></span> Retourner </a>
+            </div>
+        </div>
+        
+    </div>
+   
+{% endblock %}

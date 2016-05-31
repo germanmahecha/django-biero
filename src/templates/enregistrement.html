@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block page_titre %}
+    {{titre}}
+{% endblock %}
+
+{% block content %}
+
+<div class="container login">
+    <h1>{{titre}}</h1>
+
+        <h3>S'enregistrer</h3>
+        <form method="POST" action=''>{% csrf_token form:as_p%}
+            <input type="hidden" name='action' value='registre'></input>
+            <div class="form-group">
+                <label from="username">Usager</label>
+                <input type="text" name='username'></input></br>
+            </div>
+            <div class="form-group">
+                <label from="courriel">Courriel</label>
+                <input type="text" name='courriel'></input>
+            </div>
+            <div class="form-group">
+                <label from="password">Mot de passe</label>
+                <input type="text" name='password'></input>
+            </div>
+            <input type='submit' class="btn btn-secondary" value="Se registrer"/>
+        </form>
+ </div>
+ 
+{% endblock %} 
+
