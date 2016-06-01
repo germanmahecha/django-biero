@@ -27,7 +27,7 @@ def accueil(request):
 
 
 def details(request, pk):
-	titre = "Details d'une biere"
+	titre = "Détails d'une biere"
 	biere = get_object_or_404(Biere, pk=pk)
 	template = loader.get_template("details.html")
 	context = {
@@ -41,7 +41,7 @@ def details(request, pk):
 @login_required()
 @permission_required('is_superuser')
 def ajouter(request):
-	titre = "Ajouter une brière"
+	titre = "Ajouter une bière"
 	if request.method == 'POST':
 		form = FormulaireBiere(request.POST, request.FILES)
 

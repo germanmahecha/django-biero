@@ -38,7 +38,7 @@
                         <h1>{{biere.nomBiere}}</h1>
                         <p><strong>Brasserie:</strong> {{biere.brasserie}}</p>
                         <p><strong>Description:</strong> {{biere.description}}</p>
-                        <a class="btn btn-primary" href="{% url 'details' pk=biere.pk %}">Details bière <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="btn btn-primary" href="{% url 'details' pk=biere.pk %}">Voir détails<span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                 </div>
                 <!-- /.row -->
@@ -53,8 +53,5 @@
                 </div>
             </div>
         {% endif %}
-        
      </div>
-     
-
 {% endblock %}  
